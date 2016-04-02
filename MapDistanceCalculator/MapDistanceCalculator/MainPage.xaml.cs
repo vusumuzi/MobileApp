@@ -13,7 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Windows.UI.Xaml.Navigation;
+
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -51,5 +51,14 @@ namespace MapDistanceCalculator
         public static double Lat2;
         public static double Lon2;
         public static char unit;
+
+        private void setPositionButton_Click(object sender, RoutedEventArgs e)
+        {
+            Lat2 = MyMap.Center.Position.Latitude;
+            Lon2 = MyMap.Center.Position.Longitude;
+            //double finalDist = calculateDistance(Lat1, Lon1, Lat2, Lon2, 'k');
+            //finalDistance.Text = finalDist.ToString("0,00 Km");
+
+        }
     }
 }

@@ -19,14 +19,13 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-
         <Maps:MapControl  Name="MyMap"/>
         <StackPanel Orientation="Horizontal" Grid.Row="1">
-            <Button Name="getting your first position"
+            <Button Name="gettingyourfirstposition"
                     Content="Get Pisition"
                     Click="getPositionButton_Click"
                     Margin="0,0,20,0"/>
-            <Button Name="Click to get your second position"
+            <Button Name="Clicktogetyoursecondposition"
                     Content="Set Position"
                     Click="setPositionButton_Click"
                     Margin="0,0,20,0" />
