@@ -31,7 +31,6 @@
                     Click="setPositionButton_Click"
                     Margin="0,0,20,0" />
         </StackPanel>
-        </Buttonv>
-        
+           
     </Grid>
 </Page>
