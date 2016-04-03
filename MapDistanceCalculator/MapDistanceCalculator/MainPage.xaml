@@ -30,6 +30,10 @@
                     Click="setPositionButton_Click"
                     Margin="0,0,20,0" />
         </StackPanel>
-           
+        <TextBlock Name="positionTextBlock"
+                   Grid.Row="2"
+                   FontSize="22" />
+
+
     </Grid>
 </Page>

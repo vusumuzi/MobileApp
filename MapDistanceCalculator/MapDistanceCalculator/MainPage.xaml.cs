@@ -40,6 +40,8 @@ namespace MapDistanceCalculator
            // mySlider.Value = MyMap.ZoomLevel;
 
         }
+
+        //Getting the Current Position
         private void getPositionButton_Click(object sender, RoutedEventArgs e)
         {
             Lat1 = MyMap.Center.Position.Latitude;
@@ -52,6 +54,7 @@ namespace MapDistanceCalculator
         public static double Lon2;
         public static char unit;
 
+        //Setting the setPositionButton
         private void setPositionButton_Click(object sender, RoutedEventArgs e)
         {
             Lat2 = MyMap.Center.Position.Latitude;
