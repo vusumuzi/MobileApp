@@ -33,6 +33,9 @@
         <TextBlock Name="positionTextBlock"
                    Grid.Row="2"
                    FontSize="22" />
+        <TextBlock Name="finalDistance"
+                   Grid.Row="2"
+                   FontSize="22" />
 
 
     </Grid>
