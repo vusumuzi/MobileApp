@@ -59,9 +59,38 @@ namespace MapDistanceCalculator
         {
             Lat2 = MyMap.Center.Position.Latitude;
             Lon2 = MyMap.Center.Position.Longitude;
-            //double finalDist = calculateDistance(Lat1, Lon1, Lat2, Lon2, 'k');
-            //finalDistance.Text = finalDist.ToString("0,00 Km");
+            double finalDist = calculateDistance(Lat1, Lon1, Lat2, Lon2, 'k');
+            finalDistance.Text = finalDist.ToString("0,00 Km");
 
         }
+
+        private double calculateDistance(double Lat1, double Lon1, double Lat2,
+           double Lon2, char unit)
+        {
+            double theta = Lon1 - Lon2;
+            double dist = Math.Sin(deg2rad(Lat1)) * Math.Sin(deg2rad(Lat2)) + Math.Cos(deg2rad(Lat1)) * Math.Cos(deg2rad(Lat2)) * Math.Cos(deg2rad(theta));
+            dist = rad2deg(dist);
+            dist = dist * 60 * 1.1515;
+            if (unit == 'K')
+            {
+                dist = dist * 1.609344;
+            }
+            else if (unit == 'N')
+            {
+                dist = dist * 0.8684;
+            }
+            return dist;
+        }
+
+        private double deg2rad(double deg)
+        {
+            return (deg * Math.PI / 180.0);
+        }
+
+        private double rad2deg(double rad)
+        {
+            return (rad / Math.PI * 180.0);
+        }
+
     }
 }
