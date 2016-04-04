@@ -36,6 +36,11 @@
         <TextBlock Name="finalDistance"
                    Grid.Row="2"
                    FontSize="22" />
+        <Slider Name="mySlider"
+                Maximum="20"
+                Minimum="10"
+                ValueChanged="Slider_ValueChanged"
+                Grid.Row="3"/>
 
 
     </Grid>

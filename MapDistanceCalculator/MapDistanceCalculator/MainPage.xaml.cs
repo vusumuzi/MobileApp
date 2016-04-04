@@ -37,7 +37,7 @@ namespace MapDistanceCalculator
             var position = await locator.GetGeopositionAsync();
             await MyMap.TrySetViewAsync(position.Coordinate.Point, 18D);
 
-           // mySlider.Value = MyMap.ZoomLevel;
+            mySlider.Value = MyMap.ZoomLevel;
 
         }
 
@@ -54,6 +54,14 @@ namespace MapDistanceCalculator
         public static double Lon2;
         public static char unit;
 
+        //Adding a slider
+        private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            if (MyMap != null)
+                MyMap.ZoomLevel = e.NewValue;
+        }
+
+
         //Setting the setPositionButton
         private void setPositionButton_Click(object sender, RoutedEventArgs e)
         {
@@ -64,6 +72,7 @@ namespace MapDistanceCalculator
 
         }
 
+        //Calculating the distance between two positions
         private double calculateDistance(double Lat1, double Lon1, double Lat2,
            double Lon2, char unit)
         {
