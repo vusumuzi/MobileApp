@@ -12,4 +12,5 @@ It will give you your current position
 Use the cursor to move from your current position to your desired location
 Click set positionbutton to get the final distance
 Distance travelled would be given in kilometres.
+User a  slider to resize the window
 
